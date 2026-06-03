@@ -1,4 +1,4 @@
-# Secrets — NEVER commit these
+﻿# Secrets
 .env
 
 # Python
@@ -12,8 +12,8 @@ dist/
 build/
 
 # Data
-data/*.db
-data/*.sqlite
+*.db
+*.sqlite
 
 # Logs
 logs/
