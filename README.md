@@ -1,6 +1,9 @@
-# AI Outreach System — Monorepo
+﻿# AI Outreach System â€” Monorepo
 
-A three-agent system for getting international clients, finding remote jobs, and doing academic outreach — all with human approval before any outbound action.
+![CI](https://github.com/MuhammadOmerAbid/ai-outreach-system/actions/workflows/ci.yml/badge.svg) ![License](https://img.shields.io/github/license/MuhammadOmerAbid/ai-outreach-system) ![Python](https://img.shields.io/badge/python-3.11+-blue)
+
+
+A three-agent system for getting international clients, finding remote jobs, and doing academic outreach â€” all with human approval before any outbound action.
 
 ---
 
@@ -18,23 +21,23 @@ A three-agent system for getting international clients, finding remote jobs, and
 
 ```
 ai-outreach-system/
-├── README.md
-├── .env.example          # every API key needed (copy to .env and fill in)
-├── .gitignore
-├── requirements.txt
-├── shared/               # shared utilities used by all agents
-│   ├── config.py         # loads .env settings
-│   ├── llm.py            # Claude API wrapper
-│   ├── approval.py       # Telegram bot approval flow
-│   └── db.py             # SQLite helpers
-├── agent_content/        # Agent 1 — LinkedIn Content Agent
-├── agent_jobs/           # Agent 3 — Remote Job Hunter
-└── agent_leadgen/        # Agent 2 — Lead Gen + Enrichment Engine
+â”œâ”€â”€ README.md
+â”œâ”€â”€ .env.example          # every API key needed (copy to .env and fill in)
+â”œâ”€â”€ .gitignore
+â”œâ”€â”€ requirements.txt
+â”œâ”€â”€ shared/               # shared utilities used by all agents
+â”‚   â”œâ”€â”€ config.py         # loads .env settings
+â”‚   â”œâ”€â”€ llm.py            # Claude API wrapper
+â”‚   â”œâ”€â”€ approval.py       # Telegram bot approval flow
+â”‚   â””â”€â”€ db.py             # SQLite helpers
+â”œâ”€â”€ agent_content/        # Agent 1 â€” LinkedIn Content Agent
+â”œâ”€â”€ agent_jobs/           # Agent 3 â€” Remote Job Hunter
+â””â”€â”€ agent_leadgen/        # Agent 2 â€” Lead Gen + Enrichment Engine
 ```
 
 ---
 
-## Prerequisites — Accounts & API Keys
+## Prerequisites â€” Accounts & API Keys
 
 Before running anything, sign up for these:
 
@@ -76,21 +79,21 @@ python agent_leadgen/main.py
 
 ## Safety Rules (Non-Negotiable)
 
-1. **No LinkedIn scraping** — never use unofficial LinkedIn automation
+1. **No LinkedIn scraping** â€” never use unofficial LinkedIn automation
 2. **Human approval required** before any email, post, or connection request is sent
-3. **Official APIs only** — Apollo, RemoteOK, WeWorkRemotely RSS, Wellfound
-4. **Cold email safety** — separate sending domains only, daily cap of 30 per inbox, unsubscribe link in every email
-5. **No auto-apply to jobs** — you apply manually after reviewing AI-drafted cover notes
-6. **Secrets in `.env` only** — never hardcoded, `.env` is gitignored
+3. **Official APIs only** â€” Apollo, RemoteOK, WeWorkRemotely RSS, Wellfound
+4. **Cold email safety** â€” separate sending domains only, daily cap of 30 per inbox, unsubscribe link in every email
+5. **No auto-apply to jobs** â€” you apply manually after reviewing AI-drafted cover notes
+6. **Secrets in `.env` only** â€” never hardcoded, `.env` is gitignored
 
 ---
 
 ## Build Order (Phases)
 
-- **Phase 0** — Scaffold (this step) ✅
-- **Phase 1** — Agent 1: LinkedIn Content Agent
-- **Phase 2** — Agent 3: Remote Job Hunter
-- **Phase 3** — Agent 2: Lead Gen + Enrichment Engine
+- **Phase 0** â€” Scaffold (this step) âœ…
+- **Phase 1** â€” Agent 1: LinkedIn Content Agent
+- **Phase 2** â€” Agent 3: Remote Job Hunter
+- **Phase 3** â€” Agent 2: Lead Gen + Enrichment Engine
 
 ---
 
