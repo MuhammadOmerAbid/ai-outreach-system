@@ -1,10 +1,19 @@
-﻿install:
-	python -m venv venv
-	venv\Scripts\pip install -r requirements.txt
+.PHONY: install run-content run-jobs run-leadgen test lint
 
-run:
-	python main.py
+install:
+	pip install -r requirements.txt
+
+run-content:
+	python agent_content/main.py run
+
+run-jobs:
+	python agent_jobs/main.py run
+
+run-leadgen:
+	python agent_leadgen/main.py --help
+
+test:
+	pytest tests/ -v
 
 lint:
-	flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-
+	python -m py_compile shared/config.py shared/llm.py shared/db.py shared/approval.py
